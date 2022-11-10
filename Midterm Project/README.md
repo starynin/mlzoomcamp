@@ -4,6 +4,7 @@ Machine Learning can be used in the solutions to solving such problems, because 
 In this project I used open dataset from "University of California". 
 Here is a link to download it: https://archive.ics.uci.edu/ml/datasets/AI4I+2020+Predictive+Maintenance+Dataset
 There is the same file in the "data" folder.
+
 Steps made to train and deploy the ML model:
 1. EDA
 2. Train, validation, test split
