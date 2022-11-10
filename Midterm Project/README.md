@@ -21,7 +21,7 @@ Steps made to train and deploy the ML model:
 14. Made Docker image with Dockerfile
 15. Run Docker Container
 
-To run the web-service in the Docker container you have to start Docker.
+To run the web-service in a Docker container you have to start Docker.
 After coppping Dockerfile you have to build a Docker image by executing command:
 "docker build -t predictive ."
 Then you have to run command to run it:
