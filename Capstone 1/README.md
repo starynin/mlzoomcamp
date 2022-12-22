@@ -11,8 +11,9 @@ I am interested in Predictive Maintenance. In this project I've made a Deep Lear
 6.	Tested model on the test dataset.
 
 - Deployment of the model:
-1.	Save the Keras model into special format tensorflow “SavedModel” – folder “weather-model”
-2.	Ran the model "weather-model" with the prebuilt docker image tensorflow/serving:2.7.0. Running it on Windows you should use the command: docker run -it --rm -p 8500:8500 -v "{FULL PATH}\weather-model:/models/weather-model/1" -e MODEL_NAME="weather-model" tensorflow/serving:2.7.0. Linux: docker run -it --rm -p 8500:8500 -v $(pwd)/clothing-model:/models/clothing-model/1 -e MODEL_NAME="clothing-model" tensorflow/serving:2.7.0
+0.  Run "notebook_w.ipynb" and get a Keras model called w_xception_v1_02_0.925.h5 (it will be created in Checkpointing part)
+1.	Save the Keras model into special format tensorflow “SavedModel” – folder “weather-model” - by ranning "save keras model.ipynb"
+2.	Run the model "weather-model" with the prebuilt docker image tensorflow/serving:2.7.0. Running it on Windows you should use the command: docker run -it --rm -p 8500:8500 -v "{FULL PATH}\weather-model:/models/weather-model/1" -e MODEL_NAME="weather-model" tensorflow/serving:2.7.0. Linux: docker run -it --rm -p 8500:8500 -v $(pwd)/clothing-model:/models/clothing-model/1 -e MODEL_NAME="clothing-model" tensorflow/serving:2.7.0
 3.	Converte notebook “tf-serving-connect” into a python script “gateway.py” to build flask application
 4.	To put everything in pipenv run the command to install libraries: pipenv install grpcio==1.42.0 flask gunicorn keras-image-helper and pipenv install tensorflow-protobuf==2.7.0 protobuf==3.19
 5.	Create docker image by the name “image-model.dockerfile”.
